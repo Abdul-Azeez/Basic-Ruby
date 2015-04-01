@@ -1,0 +1,40 @@
+Local variables: Start with lowercase letter;
+Instance variables: Serve the purpose of storing information for objects always start with (@)
+Class variables: Store informaton per class hierarchy.
+Global variables are recogniseby by the $ sign.
+Constants begin with uppercase Letter.
+Keywords:
+Method names has the same rules with local variables.
+
+U can identfy object uniquely using the object_id method
+U can query an object's ability with the respond_to method
+Sending message to object with SEND method. 
+
+Local variables is to the fact they have limited scope. 
+
+
+There are actually two versions of the elipses operator, the three period version as shown previously, and the two period version. The two period version is inclusive. In other words, 1...3 means 1 up to but not including 3, while 1..3 means one through 3.
+
+By using the appropriate version of the elipses operator you can save having to code convoluted end conditions.
+
+instance method are defined by called ony by intstence of the class.
+
+Programmers use the term syntatic sugar to refer to special 
+
+■
+■
+Instance variable names always start with @ (the at sign). This enables you to rec-
+ognize an instance variable at a glance.
+Instance variables are only visible to the object to which they belong. (Being
+“visible to an object” has a technical definition having to do with the default
+object self , which you’ll see more on in chapter 5.)
+Download at Boykma.Com66
+CHAPTER 3
+■
+Organizing objects with classes
+An instance variable initialized in one method definition, inside a particular
+class, is the same as the instance variable of the same name referred to in other
+method definitions of the same class.
+
+INITIALIZING AND OBJECT WITH STATE. 
+Programmers use the term syntatic sugar to refer to special rules that let your code in a way that doesn't correspond to the normal rules but that is easy to remember how to do and look better. 
