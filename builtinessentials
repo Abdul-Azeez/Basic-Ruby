@@ -1,0 +1,4 @@
+Literal constructors means you can use special notation ,instead of a call to new, to create a new object of that class.
+
+code block can have more than one meaning. 
+Destructive(receiver-changing) effects as danger

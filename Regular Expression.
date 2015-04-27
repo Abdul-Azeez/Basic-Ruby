@@ -1,0 +1,14 @@
+/y/.match('haystack')
+pattern matching can be equalize using =~ ie =~ is same as .match
+(?:..) construct provides grouping without capturing . That is, it combines the ternms it contains in to an atomic whole without creating a backrefrences.
+Alternation. The vertical bar metacharacter(|) combines two experssions into a single one that matches either of the experssions.
+The purpose is to specify characters patterns that subsequently are determined to match(or not to match) strings.
+
+
+Zero-width means it doesn’t consume any characters in the string. The presence
+of the period is noted, but you can still match the period if your pattern contin-
+ues.
+Positive means you want to stipulate that the period be present. There are also
+negative lookaheads; they use (?!...) rather than (?=...) .
+Lookahead assertion means you want to know that you’re specifying what would be
+next, without matching it.

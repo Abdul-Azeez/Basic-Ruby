@@ -1,0 +1,38 @@
+variable-length Argumetn List: Placing an * in the variable is called splatting an argument(presumably because the asterik looks somewhat like bug after hitting the windscreeen of a fast-moving car)
+
+Every method you call returns a value(although there is no rule that says one have to use the value). The value of a method is the value of the last statement executed by the method.
+
+If the last argument to a method is preceded by an ampersand, Ruby assumes that it is a Proc object. It removes it from the parameter list, converst the Proc object into a block and associates it with the method.
+
+Hash and keyword Argument: In computer programming, named parameters or keyword arguments refer to a computer language’s support for function calls that clearly state the name of each parameter within the function call itself
+
+Private methods aan only call them on self, and only without an explicit receiver( with the usual exemption of private setter methods, which must be called with self as the receiver). Also private instance methods of Object can be called from anywhere in your code, because Object lies in the method lookup path of every class.
+
+Exception and Errors; 
+Rescue keyword. 
+RuntimeError: The default exception raised by the raise method.
+NoMethodError: An object is sent a message it can't resolve.
+Name Error: The interpreter hits an identifier it can't resolve as a variable or method name
+IOError": Caused by reading a close stream, writing to readonly stream, and similar operations 
+Error::error; A family of errors related to file I/O;
+TypeError: A method recieves an argument it can't handle
+ArgumentError. Caused by using the wrong number of argumetnst 
+
+U can use rescue inside a code block to save from error. and it can also be implicite i.e rescue (errorname), or just normal rescue.
+
+U can raise exceptions explicityl. e.g
+def fussy(x)
+  raise ArgumentError, "I need a number under 10" unless x <10
+  end
+ 
+  You can create your own exception class. e.g 
+  class MyNewException < Exception
+  end
+  raise MyNewException , "some new kind of error has occured."
+  This technique offers 2 primary benefits.
+
+  First , by letting you give new names to exception classes, it performs a self-documenting function: when MyNewException gets raised, it is dinstint from, say a ZeroDivisionError or a plain vanilla RuntimeError. 
+
+  Second, this approach lets you pinpoint your rescure operations. Once you've created MyNewException, you can rescue it by name.
+
+  L

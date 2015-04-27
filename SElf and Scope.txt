@@ -1,0 +1,1 @@
+Scopw refers to the reach or visibility of identifiers, specifically variable and constants. 

@@ -1,0 +1,145 @@
+Local variables: Start with lowercase letter;
+Instance variables: Serve the purpose of storing information for objects always start with (@)
+Class variables: Store informaton per class hierarchy.
+Global variables are recogniseby by the $ sign.
+Constants begin with uppercase Letter.
+Keywords:
+Method names has the same rules with local variables.
+
+U can identfy object uniquely using the object_id method
+U can query an object's ability with the respond_to method
+Sending message to object with SEND method. 
+
+Local variables is to the fact they have limited scope. 
+
+
+There are actually two versions of the elipses operator, the three period version as shown previously, and the two period version. The two period version is inclusive. In other words, 1...3 means 1 up to but not including 3, while 1..3 means one through 3.
+
+By using the appropriate version of the elipses operator you can save having to code convoluted end conditions.
+
+instance method are defined by called ony by intstence of the class.
+
+Programmers use the term syntatic sugar to refer to special 
+
+■
+■
+Instance variable names always start with @ (the at sign). This enables you to rec-
+ognize an instance variable at a glance.
+Instance variables are only visible to the object to which they belong. (Being
+“visible to an object” has a technical definition having to do with the default
+object self , which you’ll see more on in chapter 5.)
+Download at Boykma.Com66
+CHAPTER 3
+■
+Organizing objects with classes
+An instance variable initialized in one method definition, inside a particular
+class, is the same as the instance variable of the same name referred to in other
+method definitions of the same class.
+
+INITIALIZING AND OBJECT WITH STATE. 
+Programmers use the term syntatic sugar to refer to special rules that let your code in a way that doesn't correspond to the normal rules but that is easy to remember how to do and look better. 
+
+symbols are convenient way of referencing a name. 
+The attr_reader doesnot declare instance variables. 
+Syntax:
+Begin {
+  Code to be called before the program is executted.
+}
+End {
+  Codes to be called at the end of the programLocal Variables: 
+
+Local variables are the variables that are defined in a method. Local variables are not available outside the method. You will see more details about method in subsequent chapter. Local variables begin with a lowercase letter or _.
+
+Instance Variables: Instance variables are available across methods for any particular instance or object. That means that instance variables change from object to object. Instance variables are preceded by the at sign (@) followed by the variable name.
+
+Class Variables: Class variables are available across different objects. A class variable belongs to the class and is a characteristic of a class. They are preceded by the sign @@ and are followed by the variable name.
+
+Global Variables: Class variables are not available across classes. If you want to have a single variable, which is available across classes, you need to define a global variable. The global variables are always preceded by the dollar sign ($).
+}
+
+Ruby Pseudo-Variable are special variables that have the apperance of local variable but behave like constant. You can assign any value to these variables.
+self: The receiver object of the current method.
+
+true: Value representing true.
+
+false: Value representing false.
+
+nil: Value representing undefined.
+
+__FILE__: The name of the current source file.
+
+__LINE__: The current line number in the source file.
+
+INTEGers: An integer number can range from -230 to 230-1 or -262 to 262-1. Integers with-in this range are objects of class Fixnum and integers outside this range are stored in objects of class Bignum.
+Defined?. variable. True if variable is initialized
+defined? method_call # True if a method is defined
+
+Range
+.. Creates a range from start point to end point inclusive
+... creates a range from start point to end point exclusive.
+You call a module by precedding it's name with the modules name and a period, and you referencea constant using the module name and 2 colons.
+The :: is a unary operator that allows: constants, instance methods and class methods defined within a class or module, to be accessed from anywhere outside the class or module.
+
+Retry appears in rescue positions.
+Blocks. A block is always invoked from a function with the same name as that of the block This means that if you have a block with the name test, then you use the function test to invoke this block. 
+But if the last argument of a method is preceded by &, then you can pass a block to this method and this block will be assigned to the last parameter. In case both * and & are present in the argument list, & should come later.
+
+A program may have multiple begin statement it will executer in the order the are seen but End statement is executed in reverse order.
+
+Modules are way of grouping together methods, classes and constants. Modules give you two major benefits. 
+They provide a namespace and prevent name clashes . 
+Modules implement the mixin facility.
+
+when using require. When use $LOAD_PATH <<'.' to make Ruby aware that included files must be searced in the current directory. If you do want to use $LOAD_PATH.
+
+YOu can include a module in a class using the [include modulename].
+Ruby does not supoort multiple inherintance directly but Ruby Modules have another wonderful use. 
+
+Mixins. They eliminate the need for multiple inheritance providing a facility called mixin. The give controlled way of adding functionality to class. 
+
+Collect iterator returns all the elements of a collection.
+The collect method need not always be associated with block. The collect method returns the entire collection, regardless of whether it is an array or hash. It's better to use clone,it's better to use method when you want to do something with each of the values to get the new array. 
+
+aFile = File.new("filename", "mode")
+   # ... process the file
+aFile.close
+
+The Sysread method. Use to read the contents of a file. You can open the file in any of the modes when using the method sysread. 
+
+The IO.readlines Method reads the file line by line.
+This method also returns output line by line. The difference between the method foreach and the method readlines is that the method foreach is associated with a block. However, unlike the method readlines, the method foreach does not return an array
+
+One can test if a file is really a file using File:exists?.
+One of can test if it is a file using File.file?.
+File::directory?(). If a file is really a directory.
+File.size? returns size of file.
+File::ftype() to find out the type of file.
+
+Make a Dir. Dir.mkdir
+Dir.delete
+To make temporary directory you have to require 'tmpdir' and use Dir.tmpdir.
+
+Instance VARIABLEs. They are assessed using the @ operator within the class but to access it outside we use the accessor methods. 
+
+The accessor & setter methods: 
+
+The instance methods are also defined in the same way as we define any other method using def keyword and they can be used using a class instance only as shown below.
+
+The class variable is a variable which is shared between all instances of a class.  A method is defined using def self.methodname() which ends with end delimiter and would be called using class name as classname.methodname().
+
+ACCESS CONTROL: 
+Public Methods(): Public methods can be called by anyone. Methods are public by default except for initialize, which is always private.
+Private Methods: Privates methods cannot be accessed, or even viewed from the class. Only the class method can access private members. 
+Protected Method; A protected method can be invoked only by objects of the defining class and its sublcass. Acesss is kepty within the familty.
+
+A mixin is like a specialized implementation of multiple inheritance in which only the interface portion is inherited.
+
+You can check if an object is frozein using Object.frozen.
+You can set attribute by creating a ruby method whose name ends with an equal sign. 
+
+,dup(): This duplicate the exist
+The class Array holds a collection of object references. 
+
+Every class object is an ancestrally a module object. Mixins from modules bears a strong resemblance to inherenting from a superclass. The differnece between inheriting from a class and mixing in a module is that you can mix in more than one module. No class can inherit from more than one class.
+
+||= (or equals ). This means set too if not 

@@ -1,0 +1,39 @@
+Hashes(also known as associative arrays, maps or dictionaries ) are similar to array in that they are indexed collections of object references. Ruby remembers the order in which you store the hashes.
+
+A block is simply a chunk of code enclosed between either braces or the keywords.
+A ruby iterator is simply a method that can inovke a block of code.
+Each yield the sucessive elements of its collections.
+The find method works by passing the value of the last expresion evaluated in the block to the method as the value of yield. The find result the first element that meets the condition. 
+
+The collect method is just like find but it constructs an array.
+
+The with_index tells you how many times you have been inside the block.
+
+f = File.open("testfile")
+f.each.with_index do |line, index|
+puts "Line #{index} is: #{line}"
+end
+f.close
+produces:
+Line 0 is: This is line one
+Line 1 is: This is line two
+
+The inject method lets you accomodate a value across the memebers of a collection. If injedt is called with no paramater, it uses the first element of the collection as the initial value and starts the iteration with the second value. You can also give it methods like [i,3].inject (:+). These works because in ruby cause the symbol correspond to the method+
+
+Difference btw External Iterators and ruby's iterators. Ruby's internal iterators fall short in which you need to treet an itearator as an object on his own.(for example passing the iterator into a method that needs to access each of the values returned by that iterators.) Solution to this built in enumerator class. 
+
+One can call an enumerator using an to_enum.
+Most of the internal iterators methods- the ones that normally yield successive values to a block- will also return an enumerator object if called without a block.
+
+Enumerators are Objects. Enumerators take something that's normally executable code and turn it into an object.
+
+You can call each_char with index with enumerators. Enumerators.
+
+p() is a Kernel method that writes obj.inspect to the standard output.
+p() is a Kernel method that writes obj.inspect to the standard output.
+
+Lazy enumerators allow you to iterate  over an infinite series of values and take just the values you want.
+
+Lazy enumerators in ruby 2.0. This just like the normal enumerator but the implement methods such as select and map so they can work with infinite sequences. ie They consume any data from the collection until that data is requested, and they only consume enouth to satify that request.
+
+Blocks can be used as Closures.

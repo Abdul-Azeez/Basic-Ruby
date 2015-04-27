@@ -1,0 +1,41 @@
+Integers within a certain range (normally -2 ...2 -1 or -2 ...2 -1) are held internally in
+binary form and are objects of class Fixnum . Integers outside this range are stored in objects
+of class Bignum
+underscore is neglected.
+Ruby includes support for rational and complex numbers. You can do Rational(3,4) * Rational(2,3).
+The division of integer gives intergers. If you don't want it to give interger then use 
+require 'mathn
+'
+Looping using Numbers
+3.times, upto(5), downto(95), step(80,5)
+Interpolation allows code to appear within a string. The result of evaluating that code is inserted into the string.
+"1+2 =#{1+2}" 
+Character Constants. Constants can be created by precedding the character (or sequence that represents a character) with a question mark. 
+Ruby range is that it must respond to succ by returning the next object in squences and the objects must be comparable using <=>. This is somethimes call the spaceship operator.
+
+a <=> b :=
+  if a < b then return -1
+  if a = b then return  0
+  if a > b then return  1
+  if a and b are not comparable then return nil
+
+Explanation of ATTibrute raders: 
+attr_writer : age is the same as 
+  def age = (value)
+    @age = value
+  end
+
+attr_reader : age is same as 
+def age 
+@age
+end
+
+attr_accessor : age 
+  def age = (value)
+  @age = value
+  end
+  def age
+    @age
+  end.
+
+  A character class is a set of characters between brackets:

@@ -1,0 +1,7 @@
+Iteration is defined by the given block, in which a yielder object, given as block paramater, can be used to yield a value.
+
+There are 3 ways to create you own Enumerator. 
+1) Kernel# to_enum
+2) Kernel#enum_for
+3) Enumerator.new
+  The first 2 are actually the same thing so you can substitute them for each other. They can create the Enumerator based on any method which yields arguments.
